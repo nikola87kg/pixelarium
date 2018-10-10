@@ -1,0 +1,25 @@
+@import "src/material-custom.scss";
+
+h1 {
+    color: $px-material-primary;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+hr {
+    display: block;
+    width: 90vw;
+    margin: 20px 5vw;
+    border-color: $px-material-primary;
+}
+
+b {
+    color: $px-material-primary;
+    font-weight: normal;
+}

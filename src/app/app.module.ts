@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AnimatedBlocksComponent } from './animated-blocks/animated-blocks.component';
 
 import { AppMaterialModule } from './app-material/app-material.module';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AppMaterialModule } from './app-material/app-material.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AnimatedBlocksComponent
+    AnimatedBlocksComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,

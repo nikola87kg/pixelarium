@@ -61,7 +61,7 @@
     &.fixed9 {bottom: calc(10vh); left: 80px; animation: moverBox 8s linear 5s infinite }
 }
 
-@keyframes fallingBox { 
+@keyframes fallingBox {
     0% {    opacity: 0;     bottom: 100vh; };
     70% {   opacity: 1;     bottom: calc(10vh + 50px); left: 5px; };
     80% {   opacity: 1;     bottom: calc(10vh + 50px); left: 5px; };
@@ -81,7 +81,7 @@
     70% { transform: translateY(0) scale(1);  };
 }
 
-@keyframes dissapear { 
+@keyframes dissapear {
     0% { opacity: 0 };
     10% { opacity: 1 };
     50% { opacity: 1 };
