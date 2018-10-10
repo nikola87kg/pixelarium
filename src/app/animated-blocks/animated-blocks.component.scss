@@ -1,0 +1,98 @@
+@import "src/material-custom.scss";
+
+.px-line {
+    display: block;
+    position: fixed;
+    bottom: calc(10vh + 25px);
+    left: 0;
+    width: 90vw;
+    @media (max-width: 768px) {width: 98vw;}
+    background: $px-material-primary;
+    height: 5px;
+    * {
+        animation: dissapear 5s infinite;
+    }
+    .name {
+        position: absolute;
+        top: -35px;
+        right: 5px;
+        color: black;
+        font-size: 25px;
+    }
+    .position {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        color: darken($px-material-primary, 10);
+        font-size: 16px;
+        text-shadow: 0px 0px 1px $px-material-primary;
+    }
+    .phone {
+        position: absolute;
+        top: 35px;
+        right: 5px;
+        color: black;
+        font-size: 16px;
+    }
+    .mail {
+        position: absolute;
+        top: 60px;
+        right: 5px;
+        color: black;
+        font-size: 16px;
+    }
+}
+
+.px-block-wrapper {
+    display: inline-block;
+    position: fixed;
+    left: 5px;
+    width: 20px;
+    margin: 20px;
+    &.animated { animation: fallingBox ease 6s forwards }
+    &.fixed1 {bottom: calc(10vh + 50px); left: -20px; }
+    &.fixed2 {bottom: calc(10vh + 25px); left: -20px; }
+    &.fixed3 {bottom: calc(10vh + 25px); left: 5px; }
+    &.fixed4 {bottom: calc(10vh + 25px); left: 30px; }
+    &.fixed5 {bottom: calc(10vh); left: -20px; }
+    &.fixed6 {bottom: calc(10vh); left: 5px; }
+    &.fixed7 {bottom: calc(10vh); left: 30px; }
+    &.fixed8 {bottom: calc(10vh); left: 55px; }
+    &.fixed9 {bottom: calc(10vh); left: 80px; animation: moverBox 8s linear 5s infinite }
+}
+
+@keyframes fallingBox { 
+    0% {    opacity: 0;     bottom: 100vh; };
+    70% {   opacity: 1;     bottom: calc(10vh + 50px); left: 5px; };
+    80% {   opacity: 1;     bottom: calc(10vh + 50px); left: 5px; };
+    100% {  opacity: 0.5;   bottom: calc(10vh + 60px); left: 20px;}
+}
+
+@keyframes spinBox { 100% { transform: rotate(360deg); } }
+
+@keyframes moverBox {
+    5% { transform: translateY(0) scale(1);  };
+    10% { transform: translateY(-25px) scale(1.2); };
+    15% { transform: translateX(0) translateY(-25px) scale(1.2) ;  };
+    20% { transform: translateX(-25px) translateY(-25px) scale(1);};
+    55% { transform: translateX(-25px) translateY(-25px) scale(1);};
+    60% { transform: translateX(0) translateY(-25px) scale(1.2);  };
+    65% { transform: translateY(-25px) scale(1.2); };
+    70% { transform: translateY(0) scale(1);  };
+}
+
+@keyframes dissapear { 
+    0% { opacity: 0 };
+    10% { opacity: 1 };
+    50% { opacity: 1 };
+    90% { opacity: 1 };
+    100% { opacity: 0 };
+}
+
+.px-block {
+    background: $px-material-primary;
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    &.animated { animation: spinBox 3s ease-in-out 5s infinite; }
+}
