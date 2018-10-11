@@ -3,23 +3,28 @@
 h1 {
     color: $px-material-primary;
     text-align: center;
-    margin-top: 50px;
+    margin: 80px auto 0;
     font-size: 30px;
+    max-width: 90vw;
+    @media (min-height: 500px) {
+        width: 360px;
+        margin: 50px auto 0;
+    }
 }
 
 p {
     text-align: center;
+    margin: 10px 2.5vw;
+    max-width: 95vw;
+    animation: textAnimate linear 3s infinite;
     font-size: 20px;
-    margin-top: 10px;
-}
-hr {
-    display: block;
-    width: 90vw;
-    margin: 20px 5vw;
-    border-color: $px-material-primary;
+    @media (min-width: 700px) { font-size: 24px; }
+    @media (min-width: 1000px) { font-size: 26px; }
 }
 
-b {
-    color: $px-material-primary;
-    font-weight: normal;
+@keyframes textAnimate {
+    0% { opacity: 0; };
+    10% { opacity: 1; };
+    90% { opacity: 1; };
+    100% { opacity: 0; }
 }

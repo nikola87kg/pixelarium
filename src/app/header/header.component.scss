@@ -1,0 +1,26 @@
+@import "src/material-custom.scss";
+
+a {
+    mat-icon {
+        padding: 0 14px;
+        color: white;
+        &:hover { color: $px-material-dark; }
+    }
+    i.fa {
+        color: white;
+        margin: 0 15px;
+        font-size: 24px;
+        &:hover { color: $px-material-dark; }
+    }
+    &.phone, &.email {
+        @media (min-width:768px) {  display: none; }
+    }
+}
+
+.spacer {
+flex: 1 1 auto;
+}
+
+mat-toolbar-row {
+    background: $px-material-primary;
+}

@@ -10,10 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AnimatedBlocksComponent } from './animated-blocks/animated-blocks.component';
-
-import { AppMaterialModule } from './app-material/app-material.module';
 import { FrontPageComponent } from './front-page/front-page.component';
 
+import { AppMaterialModule } from './app-material/app-material.module';
 
 @NgModule({
   declarations: [

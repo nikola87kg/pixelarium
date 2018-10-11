@@ -10,7 +10,7 @@
     background: $px-material-primary;
     height: 5px;
     * {
-        animation: dissapear 5s infinite;
+        animation: changeName 5s infinite;
     }
     .name {
         position: absolute;
@@ -40,8 +40,27 @@
         right: 5px;
         color: black;
         font-size: 16px;
+        @media (max-height: 500px) {
+            display: none;
+        }
     }
 }
+
+.px-top-blocks {
+    display: inline-block;
+    position: fixed;
+    top: 80px;
+    background: $px-material-primary;
+    width: 18px;
+    height: 18px;
+    &.b1 { right: 25px;  animation: topOpacity linear 1s infinite }
+    &.b2 { right: 50px;  animation: topOpacity ease 2s infinite }
+    &.b3 { right: 75px;  animation: topOpacity ease-in 3s infinite }
+    &.b4 { right: 100px; animation: topOpacity ease-out 4s infinite }
+    &.b5 { right: 125px; animation: topOpacity ease-in-out 5s infinite }
+}
+
+@keyframes topOpacity { 0% { opacity: 0.3; }; 50% { opacity: 0.9; }; 100% { opacity: 0.3; } }
 
 .px-block-wrapper {
     display: inline-block;
@@ -58,7 +77,7 @@
     &.fixed6 {bottom: calc(10vh); left: 5px; }
     &.fixed7 {bottom: calc(10vh); left: 30px; }
     &.fixed8 {bottom: calc(10vh); left: 55px; }
-    &.fixed9 {bottom: calc(10vh); left: 80px; animation: moverBox 8s linear 5s infinite }
+    &.fixed9 {bottom: calc(10vh); left: 80px; animation: moverBox 10s linear 4s infinite }
 }
 
 @keyframes fallingBox {
@@ -81,11 +100,10 @@
     70% { transform: translateY(0) scale(1);  };
 }
 
-@keyframes dissapear {
+@keyframes changeName {
     0% { opacity: 0 };
-    10% { opacity: 1 };
-    50% { opacity: 1 };
-    90% { opacity: 1 };
+    20% { opacity: 1 };
+    80% { opacity: 1 };
     100% { opacity: 0 };
 }
 
