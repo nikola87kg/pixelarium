@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <meta charset="utf-8">
   <title>Pixelarium</title>
   <base href="/">
@@ -12,8 +13,76 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1976d2">
 </head>
+
 <body>
-  <px-root></px-root>
+
+  <style>
+    .wrapper {
+      display: flex;
+      padding-top: 20vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .px-top-blocks {
+      background: #30969f;
+      margin: 5px;
+      width: 25px;
+      height: 25px;
+    }
+
+    @keyframes topOpacity {
+      0% {
+        opacity: 0.3;
+      }
+
+      ;
+
+      50% {
+        opacity: 0.9;
+      }
+
+      ;
+
+      100% {
+        opacity: 0.3;
+      }
+    }
+
+    .px-top-blocks.b1 {
+      animation: topOpacity linear 1s infinite
+    }
+
+    .px-top-blocks.b2 {
+      animation: topOpacity ease 2s infinite
+    }
+
+    .px-top-blocks.b3 {
+      animation: topOpacity ease-in 3s infinite
+    }
+
+    .px-top-blocks.b4 {
+      animation: topOpacity ease-out 4s infinite
+    }
+
+    .px-top-blocks.b5 {
+      animation: topOpacity ease-in-out 5s infinite
+    }
+
+  </style>
+
+  <px-root>
+      
+      <div class="wrapper">
+          <!-- Top Blocks -->
+          <div class="px-top-blocks b1"></div>
+          <div class="px-top-blocks b2"></div>
+          <div class="px-top-blocks b3"></div>
+          <div class="px-top-blocks b4"></div>
+          <div class="px-top-blocks b5"></div>
+      </div>
+
+  </px-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
+
 </html>

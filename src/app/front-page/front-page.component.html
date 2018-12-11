@@ -1,9 +1,20 @@
+<div class="background-image">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="headline">Dobro došli u svet savršenih piksela</h1>
+    
 
-<br>
-<h1>Dobro došli u svet savršenih piksela</h1>
+    <br>
+    <div class="snapshot">
+        <img *ngIf="image2" [src]="image2" [alt]="image2">
+        <img [src]="image" [alt]="image">
+    </div>
+    <br>
+    <p class="dynamic-text" [innerHTML]='text'></p>
 
-<br>
+</div>
 
-<p [innerHTML]='text'></p>
 
 
